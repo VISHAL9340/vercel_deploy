@@ -1,15 +1,14 @@
 from flask import Flask
-import os
 
 def create_app():
     app = Flask(__name__)
-    
-    # Create downloads folder if not exists
-    os.makedirs("downloads", exist_ok=True)
 
-    # Import routes
-    from api.routes import download_bp
-    app.register_blueprint(download_bp)
+    @app.route("/")
+    def home():
+        return {"message": "Instagram Reel Downloader API Running!"}
+
+    @app.route("/download", methods=["GET"])
+    def download_reel():
+        return {"message": "Download function will be implemented here"}
 
     return app
-
