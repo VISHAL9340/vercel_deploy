@@ -8,12 +8,5 @@
   ],
   "env": {
     "PYTHONUNBUFFERED": "1"
-  },
-  "build": {
-    "cmd": [
-      "apt-get update",
-      "apt-get install -y ffmpeg"
-    ]
   }
 }
-
